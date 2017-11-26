@@ -59,10 +59,10 @@ route::group(['prefix'=>'student'],function() {
     ])->where(['subject' => '(chinese|english|math)']);
 });
 */
-
 /*
-route::get('/','HomeController@indexc');
 
+route::get('/','HomeController@indexc');
+*/
 route::group(['prefix'=>'student'],function() {
 
     Route::get('{student_no}', [
@@ -75,7 +75,7 @@ route::group(['prefix'=>'student'],function() {
         'uses'=>'StudentController@getStudentScore'
         ])->where(['subject' => '(chinese|english|math)']);
 });
-
+/*
 route::controller('board','BoardController');
 */
 
